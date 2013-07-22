@@ -11,10 +11,19 @@
   <meta content="ppparticularity.com" name="author">
   <link href="css/style-t1.css" rel="stylesheet">
   <script src="js/libs/modernizr.min.js"></script>
-  <link href="ico/favicon.ico" rel="shortcut icon">
-  <link href="ico/apple-touch-icon.png" rel="apple-touch-icon">
-  <link href="ico/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
-  <link href="ico/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<!-- Include the core jQuery and jQuery UI -->
+<script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+
+<!-- Include the core media player JavaScript. -->
+<script type="text/javascript" src="osmplayer/bin/osmplayer.compressed.js"></script>
+
+<!-- Include the DarkHive ThemeRoller jQuery UI theme. -->
+<link rel="stylesheet" href="osmplayer/jquery-ui/dark-hive/jquery-ui.css">
+
+<!-- Include the Default template CSS and JavaScript. -->
+<link rel="stylesheet" href="osmplayer/templates/default/css/osmplayer_default.css">
+<link rel="stylesheet" href="osmplayer/templates/default/osmplayer.default.js">
 </head>
 <body class="documentation" data-spy="scroll" data-target=".documentation-nav">
   <!-- .................................... $header .................................... -->
@@ -82,13 +91,15 @@
           <section class="section-content section-bootstrap" id="section-bootstrap">
             <h3 class="section-title">
               热身
-              <small> </small>
-            </h3>
-			<p><img alt="" src="img/kendo/class/reshen.jpg"></p> 
-			<p>练习剑道之前，剑友们会围成一个圈，并把竹剑朝中心位置摆放，进行热身运动。</p>
-            <p>
-			头部运动，肩部运动，大转腰，转腰，高压腿，低压腿，膝部活动，脚踝活动，整理运动，大摆正，正击面，斜击面，KOTE打击，DO打击，跳跃摆正，转剑</p>
-</section>
+             <script type="text/javascript">
+  $(function() {
+    $("#osmplayer").osmplayer({
+      playlist: 'playlist.xml',
+      height: '500px'
+    });
+  });
+</script>
+<div id="osmplayer"></div></section>
           <!-- .................................... $HTML5 CSS3 .................................... -->
           <section class="section-content section-html5-css3" id="xunlianfangfa">
             <h3 class="section-title">
